@@ -107,7 +107,7 @@ impl H264Encoder {
         ffmpeg_vid_encoder.set_width(ec.output_width);
         ffmpeg_vid_encoder.set_height(ec.output_height);
         ffmpeg_vid_encoder.set_format(AvPixel::YUV420P);
-        ffmpeg_vid_encoder.set_frame_rate(Some((ec.framerate as i32, 1)));
+        ffmpeg_vid_encoder.set_frame_rate(Some((1, 1)));
         ffmpeg_vid_encoder.set_time_base(Rational(1, ec.framerate as i32));
         ffmpeg_vid_encoder.set_bit_rate(ec.bitrate as usize);
         if ec.disable_b_frames {
